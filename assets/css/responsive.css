@@ -1,0 +1,85 @@
+/* ==========================================================
+   responsive.css
+
+   Purpose
+   -------
+   Defines all responsive behavior for the website.
+
+   Responsive Strategy
+   -------------------
+   Desktop First
+
+   Breakpoints
+   -----------
+   Large Desktop : ≤ 1400px
+   Desktop       : ≤ 1200px
+   Tablet        : ≤ 992px
+   Mobile        : ≤ 768px
+   Small Mobile  : ≤ 480px
+
+   Rules
+   -----
+   ✓ All media queries live in this file.
+   ✓ No media queries in other CSS files.
+   ✓ Responsive styles only.
+========================================================== */
+
+
+/* ==========================================================
+   LARGE DESKTOP
+   ≤ 1400px
+========================================================== */
+
+@media (max-width: 1400px) {
+
+    /* Add large desktop responsive styles here */
+
+}
+
+
+/* ==========================================================
+   DESKTOP
+   ≤ 1200px
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    /* Add desktop responsive styles here */
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ≤ 992px
+========================================================== */
+
+@media (max-width: 992px) {
+
+    /* Add tablet responsive styles here */
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ≤ 768px
+========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Add mobile responsive styles here */
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ≤ 480px
+========================================================== */
+
+@media (max-width: 480px) {
+
+    /* Add small mobile responsive styles here */
+
+}

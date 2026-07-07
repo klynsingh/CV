@@ -1,1 +1,0 @@
-Folders for website assets.

@@ -1,0 +1,158 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Theme Toggle Switch --- */
+.theme-switcher {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+.theme-switcher:hover {
+    color: var(--accent-gold);
+}
+.theme-switcher .fa-sun {
+    display: none;
+}
+body.light-mode .theme-switcher .fa-sun {
+    display: block;
+}
+body.light-mode .theme-switcher .fa-moon {
+    display: none;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    background: transparent;
+}
+.btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-charcoal);
+}
+
+/* Add this to styles.css */
+.hero-buttons {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    margin-top: 2rem;
+}
+
+/* Optional: Ensures buttons don't stretch too wide on mobile */
+.hero-buttons .btn {
+    text-align: center;
+}
+
+/* --- General Section & Content Styling --- */
+.section {
+    padding: 5rem 0;
+}
+.section-divider {
+    border-bottom: 1px solid var(--border-color);
+}
+.section-header {
+    margin-bottom: 3rem;
+}
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.section-header p {
+    max-width: 600px;
+    color: var(--text-secondary);
+}
+.subsection-header {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* --- About Section --- */
+.about-content p {
+    color: var(--text-secondary);
+  	font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+.about-content p:last-of-type {
+    margin-bottom: 0;
+}
+.about-content strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+.contact-info {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.contact-item {
+    color: var(--text-secondary);
+}
+.contact-item span {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.contact-info-link {
+    color: var(--text-secondary);
+    border-bottom: 1px dotted var(--text-secondary);
+}
+
+.contact-info-link:hover {
+    color: var(--accent-gold);
+    border-bottom-color: var(--accent-gold);
+}
+
+/* --- Timeline (Education & Research) --- */
+.timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 2px solid var(--border-color);
+}
+.timeline-item {
+    position: relative;
+    padding-bottom: 3rem;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -49px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--bg-surface);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.timeline-item:hover::before {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+.timeline-content { padding-left: 2rem; }
+.timeline-date {
+    font-weight: 700;
+    color: var(--accent-gold);
+    margin-bottom: 0.5rem;
+}
+.timeline-title { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.timeline-title a { color: var(--text-primary); }
+.timeline-title a:hover { color: var(--accent-gold); }
+.timeline-meta, .timeline-description { color: var(--text-secondary); }

@@ -1,0 +1,20 @@
+
+@keyframes clip-reveal {
+  to {
+    clip-path: circle(150% at var(--x) var(--y));
+  }
+}
+
+/* --- View Transition API for Theme Switch --- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  /* Make the circle originate from the click position */
+  clip-path: circle(0% at var(--x) var(--y));
+  /* Animate the circle to cover the whole screen */
+  animation: clip-reveal 0.5s ease-in-out forwards;
+}
