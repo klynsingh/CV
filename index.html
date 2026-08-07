@@ -33,8 +33,11 @@
 <body>
     <header class="header" id="header">
         <div class="container">
-            <nav class="nav">
+            <nav class="nav" aria-label="Primary navigation">
                 <a href="#" class="logo">Kalyan<span>.</span>Singh</a>
+                <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
@@ -42,10 +45,10 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#achievements" class="nav-link">Achievements</a></li>
                     <li>
-                        <div class="theme-switcher" id="theme-toggle" title="Toggle theme">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                        </div>
+                        <button class="theme-switcher" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -60,13 +63,18 @@
                     <p class="greeting" data-aos="fade-up">Hello, I'm</p>
                      <h1 data-aos="fade-up" data-aos-delay="100">Kalyan Singh<span>.</span></h1>
                       <p class="description" data-aos="fade-up" data-aos-delay="200">
-                        Versatile and research-oriented computational chemist with Ph.D. research focused on excited-state dynamics and photodissociation of small molecules, combining deep theoretical insight with practical simulation skills.
+                        Ph.D. researcher in computational chemistry, investigating excited-state dynamics and the photodissociation of small molecules through theoretical insight and practical simulation.
                     </p>
+                    <ul class="hero-highlights" aria-label="Research highlights" data-aos="fade-up" data-aos-delay="250">
+                        <li>Excited-state dynamics</li>
+                        <li>Trajectory surface hopping</li>
+                        <li>Peer-reviewed research</li>
+                    </ul>
                       <div class="hero-buttons">
     					<a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="300">
         					Get In Touch
     					</a>
-    					<a href="assets/Kalyan_Singh_CV_2025.pdf" download="Kalyan_Singh_CV_2025.pdf" class="btn" data-aos="fade-up" data-aos-delay="400">
+    					<a href="/assets/Kalyan_Singh_CV_2026.pdf" download="Kalyan_Singh_CV_2025.pdf" class="btn" data-aos="fade-up" data-aos-delay="400">
         					Download CV <i class="fas fa-download" style="margin-left: 8px;"></i>
     					</a>
 					  </div>
@@ -86,11 +94,11 @@
                     <h2>About Me</h2>
                 </div>
                 <div class="about-content" data-aos="fade-up">
-                    <p>For the past <strong>four years</strong>, I have been working on excited-state dynamics, with a particular focus on the photodissociation dynamics of small molecules using trajectory surface-hopping techniques. It's a field that allows me to bridge abstract theory with tangible outcomes, simulating how molecules behave when energized by light to map out their reaction pathways.</p>
+                    <p>My research focuses on excited-state dynamics, particularly the photodissociation of small molecules using trajectory surface-hopping techniques. It bridges abstract theory with tangible outcomes by simulating how energized molecules move through reaction pathways.</p>
                     <p>In parallel, I have contributed to computational studies on small molecule activation and bonding, driven by a need to understand the fundamental principles that govern our world. This has deepened my expertise in analyzing complex chemical bonds and reaction mechanisms, and my current research continues to explore new nonadiabatic pathways in molecular photodissociation dynamics.</p>
                     <div class="contact-info">
     					<div class="contact-item">
-        					<span>Location</span> // <a href="https://www.google.com/maps/search/?api=1&query=Kharagpur,India" class="contact-info-link" target="_blank" title="View on Map">Kharagpur, India</a>
+        					<span>Location</span> // <a href="https://www.google.com/maps/search/?api=1&query=Kharagpur,India" class="contact-info-link" target="_blank" rel="noopener noreferrer" title="View on Map">Kharagpur, India</a>
     					</div>
     					<div class="contact-item">
         					<span>Phone</span> // <a href="tel:+919564602455" class="contact-info-link" title="Start a call">+91 9564602455</a>
@@ -112,14 +120,14 @@
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">2022 - Present</p>
-                            <h3 class="timeline-title">Ph.D in Computational Chemistry</h3>
+                            <h3 class="timeline-title">Ph.D. in Computational Chemistry</h3>
                             <p class="timeline-meta">Banaras Hindu University</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">2019 - 2021</p>
-                            <h3 class="timeline-title">Ph.D in Computational Chemistry</h3>
+                            <h3 class="timeline-title">Doctoral Research in Computational Chemistry</h3>
                             <p class="timeline-meta">Indian Institute of Science Education and Research Kolkata</p>
                         </div>
                     </div>
@@ -150,55 +158,73 @@
                     <p>A summary of my peer-reviewed publications, presentations, and key projects.</p>
                 </div>
 
-                <h4 class="subsection-header" data-aos="fade-up">Publications</h4>
+                <div class="research-focus-grid" data-aos="fade-up">
+                    <article class="research-focus">
+                        <p class="research-focus-label">Research theme 01</p>
+                        <h3>Excited-State Dynamics</h3>
+                        <p>Studying nonadiabatic molecular behavior with multireference electronic-structure methods and trajectory surface-hopping simulations.</p>
+                    </article>
+                    <article class="research-focus">
+                        <p class="research-focus-label">Research theme 02</p>
+                        <h3>Photodissociation Mechanisms</h3>
+                        <p>Mapping light-driven reaction pathways in small molecules to understand how energy redistributes and bonds break.</p>
+                    </article>
+                    <article class="research-focus">
+                        <p class="research-focus-label">Research theme 03</p>
+                        <h3>Bonding &amp; Small-Molecule Activation</h3>
+                        <p>Using Density functional theory (DFT) to investigate chemical bonding, activation pathways, and reaction mechanisms.</p>
+                    </article>
+                </div>
+
+                <h3 class="subsection-header" data-aos="fade-up">Selected Publications</h3>
                 <div class="timeline" data-aos="fade-up">
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">2021 // Chemistry - An Asian Journal</p>
-                            <h3 class="timeline-title"><a href="https://doi.org/10.1002/asia.202100847" target="_blank">Metal-Free CO₂ Reduction to CO</a></h3>
+                            <h4 class="timeline-title"><a href="https://doi.org/10.1002/asia.202100847" target="_blank" rel="noopener noreferrer">Metal-Free CO₂ Reduction to CO</a></h4>
                             <p class="timeline-description">"Computational Exploration of Mechanistic Avenues in Metal-Free CO₂ Reduction to CO by Disilyne Bisphosphine Adduct and Phosphonium Silaylide"</p>
                         </div>
                     </div>
                      <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">2021 // Dalton Transactions</p>
-                            <h3 class="timeline-title"><a href="https://doi.org/10.1039/D1DT00798J" target="_blank">Yttrium Germole Dianion Complexes</a></h3>
+                            <h4 class="timeline-title"><a href="https://doi.org/10.1039/D1DT00798J" target="_blank" rel="noopener noreferrer">Yttrium Germole Dianion Complexes</a></h4>
                              <p class="timeline-description">"Yttrium germole dianion complexes with Y-Ge bonds"</p>
                         </div>
                     </div>
                 </div>
 
-                <h4 class="subsection-header" data-aos="fade-up">Poster Presentations</h4>
+                <h3 class="subsection-header" data-aos="fade-up">Poster Presentations</h3>
                 <div class="timeline" data-aos="fade-up">
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">Dec 2023 // TCS 2023, IIT Madras</p>
-                            <h3 class="timeline-title"><a href="https://doi.org/10.13140/RG.2.2.24958.50247" target="_blank">Photodissociation Dynamics of Acetonitrile</a></h3>
+                            <h4 class="timeline-title"><a href="https://doi.org/10.13140/RG.2.2.24958.50247" target="_blank" rel="noopener noreferrer">Photodissociation Dynamics of Acetonitrile</a></h4>
                             <p class="timeline-description">Presented a trajectory surface-hopping study at the Theoretical Chemistry Symposium.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">Sep 2021 // 27th CRSI National Symposium</p>
-                            <h3 class="timeline-title"><a href="https://doi.org/10.26226/morressier.614222345a6b32ccbe1480ef" target="_blank">Metal-Free CO₂ Activation</a></h3>
+                            <h4 class="timeline-title"><a href="https://doi.org/10.26226/morressier.614222345a6b32ccbe1480ef" target="_blank" rel="noopener noreferrer">Metal-Free CO₂ Activation</a></h4>
                             <p class="timeline-description">Presented a computational exploration of CO₂ activation by disilyne bisphosphine adduct and disilenes.</p>
                         </div>
                     </div>
                      <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">May 2021 // RCS-IISER Desktop Seminar</p>
-                            <h3 class="timeline-title"><a href="https://doi.org/10.13140/RG.2.2.15846.55363/1" target="_blank">Role of Disilene Substituents</a></h3>
+                            <h4 class="timeline-title"><a href="https://doi.org/10.13140/RG.2.2.15846.55363/1" target="_blank" rel="noopener noreferrer">Role of Disilene Substituents</a></h4>
                             <p class="timeline-description">Presented a computational study on the role of disilene substituents toward CO₂ activation.</p>
                         </div>
                     </div>
                 </div>
 
-                <h4 class="subsection-header" data-aos="fade-up">Master Project</h4>
+                <h3 class="subsection-header" data-aos="fade-up">Master Project</h3>
                 <div class="timeline" data-aos="fade-up">
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <p class="timeline-date">July 2017 - May 2018</p>
-                            <h3 class="timeline-title">Asymmetric Bis-allylation of Imines</h3>
+                            <h4 class="timeline-title">Asymmetric Bis-allylation of Imines</h4>
                             <p class="timeline-meta">Instructor: Prof. Rodney A. Fernandes, IIT Bombay</p>
                             <p class="timeline-description">Developed the asymmetric allylation of bis-imines by employing a chiral π-allylpalladium complex to furnish the bis-homoallylamines in good yields and enantioselectivity.</p>
                         </div>
@@ -292,19 +318,19 @@
         </section>
     </main>
 
-    <a href="#" class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </a>
 
     <footer id="contact" class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/klynsingh/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=GiX1K9UAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-          	<a href="https://github.com/klynsingh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:Kalyansingh112@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/klynsingh/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://scholar.google.com/citations?user=GiX1K9UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+          	<a href="https://github.com/klynsingh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+            <a href="mailto:Kalyansingh.work@gmail.com" aria-label="Email Kalyan Singh" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
         </div>
-        <p>© 2026 <a href="#">Kalyan Singh</a>. All Rights Reserved.</p>
+        <p>© <span id="current-year">2026</span> <a href="#">Kalyan Singh</a>. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -313,7 +339,29 @@
     <script>
         // --- THEME SWITCHER SCRIPT ---
         const themeToggle = document.getElementById('theme-toggle');
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
         const body = document.body;
+
+        const setTheme = (isLight) => {
+            body.classList.toggle('light-mode', isLight);
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        navMenu.addEventListener('click', (event) => {
+            if (event.target.closest('.nav-link')) {
+                navMenu.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.setAttribute('aria-label', 'Open navigation menu');
+            }
+        });
 
         // Event listener for the toggle button
         themeToggle.addEventListener('click', (event) => {
@@ -331,23 +379,11 @@
                     document.documentElement.style.setProperty('--y', y + 'px');
 
                     // Toggle the theme class and save preference
-                    if (isLight) {
-                        body.classList.remove('light-mode');
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        body.classList.add('light-mode');
-                        localStorage.setItem('theme', 'light');
-                    }
+                    setTheme(!isLight);
                 });
             } else {
                 // Fallback for browsers without View Transitions support
-                if (isLight) {
-                    body.classList.remove('light-mode');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    body.classList.add('light-mode');
-                    localStorage.setItem('theme', 'light');
-                }
+                setTheme(!isLight);
             }
         });
 
@@ -355,9 +391,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
             if (savedTheme === 'light') {
-                body.classList.add('light-mode');
+                setTheme(true);
             }
         });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
 
 
         // --- EXISTING SCRIPTS ---
