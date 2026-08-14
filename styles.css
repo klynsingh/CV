@@ -146,6 +146,38 @@ body.light-mode .skill-tag {
     background: var(--bg-light);
 }
 
+body.light-mode .skill-tag:hover {
+    background: #eaeaea;
+    color: var(--accent-gold);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+body.light-mode .publications-header {
+    border-bottom-color: var(--border-color-light);
+}
+
+body.light-mode .btn-doi:hover {
+    color: var(--bg-light);
+}
+body.light-mode .contact-card {
+    background: var(--bg-surface-light);
+    border-color: var(--border-color-light);
+}
+body.light-mode .contact-card-title {
+    color: var(--text-primary-light);
+}
+body.light-mode .contact-card-desc {
+    color: var(--text-secondary-light);
+}
+body.light-mode .inline-copy-btn {
+    border-color: var(--border-color-light);
+    color: var(--text-secondary-light);
+}
+body.light-mode .inline-copy-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
 body.light-mode .footer {
     color: var(--text-secondary-light);
 }
@@ -376,6 +408,39 @@ body.light-mode .theme-switcher .fa-moon {
     border-bottom: 1px solid var(--border-color);
 }
 
+.publications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.publications-header .subsection-header {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+.scholar-link {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s, transform 0.3s;
+}
+.scholar-link:hover {
+    color: var(--text-primary);
+    transform: translateX(3px);
+}
+body.light-mode .scholar-link:hover {
+    color: var(--text-primary-light);
+}
+
 /* --- Research Focus --- */
 .research-focus-grid {
     display: grid;
@@ -409,7 +474,7 @@ body.light-mode .theme-switcher .fa-moon {
     color: var(--text-secondary);
   	font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-wrap: pretty;
 }
 .about-content p:last-of-type {
     margin-bottom: 0;
@@ -440,6 +505,25 @@ body.light-mode .theme-switcher .fa-moon {
 .contact-info-link:hover {
     color: var(--accent-gold);
     border-bottom-color: var(--accent-gold);
+}
+
+.inline-copy-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    transition: all 0.25s;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+}
+.inline-copy-btn:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
 }
 
 /* --- Timeline (Education & Research) --- */
@@ -482,6 +566,37 @@ body.light-mode .theme-switcher .fa-moon {
 .timeline-title a:hover { color: var(--accent-gold); }
 .timeline-meta, .timeline-description { color: var(--text-secondary); }
 
+/* --- Publication & Poster Action Links --- */
+.pub-links {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.btn-doi {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    border: 1.5px solid var(--accent-gold);
+    color: var(--accent-gold);
+    background: transparent;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s, transform 0.25s;
+}
+.btn-doi i {
+    font-size: 0.7rem;
+}
+.btn-doi:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-charcoal);
+    transform: translateY(-2px);
+}
+
 /* --- Cards (Skills & Achievements) --- */
 .card-grid {
     display: grid;
@@ -515,7 +630,15 @@ body.light-mode .theme-switcher .fa-moon {
     font-size: 0.9rem;
     border-radius: 4px;
     color: var(--text-secondary);
-    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid transparent;
+    transition: background-color 0.25s, color 0.25s, transform 0.25s, border-color 0.25s;
+    cursor: default;
+}
+.skill-tag:hover {
+    background: var(--bg-surface);
+    color: var(--accent-gold);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
 }
 
 /* --- Footer & Back to Top --- */
@@ -543,6 +666,50 @@ body.light-mode .theme-switcher .fa-moon {
     text-align: center;
     color: var(--text-secondary);
     font-size: 0.9rem;
+}
+
+/* --- Quick Contact Card --- */
+.contact-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.contact-card-title {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.contact-card-desc {
+    color: var(--text-secondary);
+    max-width: 550px;
+    margin: 0 auto 1.75rem auto;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+.contact-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.copy-email-btn.copied,
+.inline-copy-btn.copied {
+    border-color: #22c55e;
+    color: #22c55e;
 }
 .footer-socials {
     display: flex;
@@ -590,6 +757,12 @@ body.light-mode .theme-switcher .fa-moon {
     }
     .nav-menu.is-open { display: flex; }
     .nav-link { display: block; padding: 0.65rem 0.75rem; }
+    .nav-menu.is-open .nav-link.active {
+        background: rgba(212, 175, 55, 0.1);
+        border-left: 3px solid var(--accent-gold);
+        border-bottom-color: transparent;
+        padding-left: 1rem;
+    }
     .theme-switcher { padding: 0.65rem 0.75rem; }
     body.light-mode .nav-toggle { color: var(--text-primary-light); }
     body.light-mode .nav-menu { background: var(--bg-surface-light); border-color: var(--border-color-light); }
